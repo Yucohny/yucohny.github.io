@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 120px;
+        }
+        .header {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background-color: pink;
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-default {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <h1>发表评论</h1>
+        </div>
+        <div class="container">
+            <form action="/comment" method="get">
+                <br>
+                <div class="form-group">
+                    <label for="input_name">姓名</label>
+                    <input type="text" class="form-control" required="" minlength="2" maxlength="10" id="input_name" name="name"
+                           placeholder="请写入你的姓名">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="textarea_message">留言</label>
+                    <textarea class="form-control" name="message" id="textarea_message" cols="30" rows="10" required=""
+                              minlength="5" maxlength="20" placeholder="请在此处留言"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-default">发表</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

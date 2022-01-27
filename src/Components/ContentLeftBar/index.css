@@ -1,0 +1,7 @@
+.ContentLeftBar {
+    float: left;
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 300px;
+    border: 1px solid red;
+}

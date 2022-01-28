@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import MyNavLink from "../MyNavLink"
 import { Menu } from 'antd';
 import './index.css'
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.less'
 
 const data = [
     ["/introduction", "简介"],

@@ -1,10 +1,18 @@
 import React, {Component} from "react"
 import {Route, Routes} from "react-router-dom";
 import MyMarkdown from "../MyMarkdown";
-// import IntroductionBody from "../../Pages/IntroductionBody"
-import JSBody from "../../Pages/JSBody";
 import './index.css'
-import markdown from '../../note/README.md'
+import readme from '../../note/README.md'
+import hc_readme from '../../note/CSS/README.md'
+import hc_unit from '../../note/CSS/单位.md'
+import hc_dis from '../../note/CSS/display.md'
+import hc_pos from '../../note/CSS/position.md'
+import hc_float from '../../note/CSS/float.md'
+import hc_box from '../../note/CSS/盒模型.md'
+import hc_hide from '../../note/CSS/隐藏元素.md'
+import hc_center from '../../note/CSS/水平垂直居中.md'
+import hc_flex from '../../note/CSS/弹性布局.md'
+import hc_bfc from '../../note/CSS/BFC.md'
 import js_readme from '../../note/JavaScript/README.md'
 import js_inhtml from '../../note/JavaScript/1-HTML中的JavaScript.md'
 import js_datatype from '../../note/JavaScript/2-数据类型与操作符与语句.md'
@@ -33,8 +41,19 @@ import js_absic from '../../note/JavaScript/17-异步操作-基础.md'
 import js_apromise from '../../note/JavaScript/17-异步操作-Promise对象.md'
 import js_agene from '../../note/JavaScript/17-异步操作-Generator函数.md'
 import js_afunc from '../../note/JavaScript/17-异步操作-async函数.md'
+import './index.css'
 
-
+const css_data = [
+    ["unit", hc_unit],
+    ["display", hc_dis],
+    ["position", hc_pos],
+    ["float", hc_float],
+    ["boxmodel", hc_box],
+    ["hide", hc_hide],
+    ["centered_horizontally_and_vertically", hc_center],
+    ["flex", hc_flex],
+    ["bfc", hc_bfc]
+]
 
 const js_data = [
     ["inhtml", js_inhtml],
@@ -71,9 +90,16 @@ export default class ContentBody extends Component {
         return (
             <div className="ContentBody">
                 <Routes>
-                    <Route path="/" element={<MyMarkdown children={markdown}/>}/>
-                    <Route path="/introduction" element={<MyMarkdown children={markdown}/>}/>
-                    {/*<Route path="/introduction" element={<IntroductionBody/>}/>*/}
+                    <Route path="/" element={<MyMarkdown children={readme}/>}/>
+                    <Route path="/introduction" element={<MyMarkdown children={readme}/>}/>
+                    <Route path="/htmlcss">
+                        <Route index element={<MyMarkdown children={hc_readme}/>}/>
+                        {
+                            css_data.map((item) => {
+                                return <Route path={"/htmlcss/" + item[0]} element={<MyMarkdown children={item[1]}/>}/>
+                            })
+                        }
+                    </Route>
                     <Route path="/javascript">
                         <Route index element={<MyMarkdown children={js_readme}/>}/>
                         {
@@ -81,15 +107,6 @@ export default class ContentBody extends Component {
                                 return <Route path={"/javascript/" + item[0]} element={<MyMarkdown children={item[1]}/>}/>
                             })
                         }
-                        {/*<Route path="/javascript/inhtml" element={<MyMarkdown children={js_inhtml}/>}/>*/}
-                        {/*<Route path="/javascript/datatype" element={<MyMarkdown children={js_datatype}/>}/>*/}
-                        {/*<Route path="/javascript/function" element={<MyMarkdown children={js_func}/>}/>*/}
-                        {/*<Route path="/javascript/object_basic" element={<MyMarkdown children={js_obj_basic}/>}/>*/}
-                        {/*<Route path="/javascript/object_prototype" element={<MyMarkdown children={js_obj_pro}/>}/>*/}
-                        {/*<Route path="/javascript/object_extend" element={<MyMarkdown children={js_obj_ext}/>}/>*/}
-                        {/*<Route path="/javascript/object_class" element={<MyMarkdown children={js_obj_class}/>}/>*/}
-                        {/*<Route path="/javascript/dom" element={<MyMarkdown children={js_dom}/>}/>*/}
-                        {/*<Route path="/javascript/bom" element={<MyMarkdown children={js_bom}/>}/>*/}
                     </Route>
                 </Routes>
             </div>

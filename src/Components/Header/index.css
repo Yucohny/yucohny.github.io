@@ -1,14 +1,12 @@
 .Header {
     z-index: 100;
     position: sticky;
-    top: 0;
-    line-height: 40px;
+    top: 20px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: white;
-
 }
 
 .HeaderItem {

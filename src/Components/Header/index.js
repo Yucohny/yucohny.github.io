@@ -14,7 +14,7 @@ export default class Header extends Component {
                 <div className="HeaderItem"><MyNavLink to="/dvamock" name="Dva&Mock"/></div>
                 <div className="HeaderItem"><MyNavLink to="/nodejs" name="Node.js"/></div>
                 <div className="HeaderItem"><MyNavLink to="/webpack" name="Webpack"/></div>
-                <div className="HeaderItem"><MyNavLink to="/datastructure&algorithm" name="数据结构与算法"/></div>
+                <div className="HeaderItem"><MyNavLink to="/data-structure&algorithm" name="数据结构与算法"/></div>
             </div>
         )
     }

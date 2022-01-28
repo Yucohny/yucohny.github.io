@@ -41,6 +41,12 @@ import js_absic from '../../note/JavaScript/17-异步操作-基础.md'
 import js_apromise from '../../note/JavaScript/17-异步操作-Promise对象.md'
 import js_agene from '../../note/JavaScript/17-异步操作-Generator函数.md'
 import js_afunc from '../../note/JavaScript/17-异步操作-async函数.md'
+import dsa_readme from '../../note/数据结构与算法/README.md'
+import dsa_sql from '../../note/数据结构与算法/栈队列链表.md'
+import dsa_sort from '../../note/数据结构与算法/各种排序算法.md'
+import dsa_heap from '../../note/数据结构与算法/堆.md'
+import dsa_ufds from '../../note/数据结构与算法/并查集.md'
+import dsa_bst from '../../note/数据结构与算法/二叉搜索树.md'
 import './index.css'
 
 const css_data = [
@@ -85,6 +91,14 @@ const js_data = [
     ["async_func", js_afunc],
 ]
 
+const dsa_data = [
+    ["stack-queue-list", dsa_sql],
+    ["sort", dsa_sort],
+    ["heap", dsa_heap],
+    ["union-find-disjoint-sets", dsa_ufds],
+    ["bst", dsa_bst],
+]
+
 export default class ContentBody extends Component {
     render() {
         return (
@@ -105,6 +119,14 @@ export default class ContentBody extends Component {
                         {
                             js_data.map((item) => {
                                 return <Route path={"/javascript/" + item[0]} element={<MyMarkdown children={item[1]}/>}/>
+                            })
+                        }
+                    </Route>
+                    <Route path="/data-structure&algorithm">
+                        <Route index element={<MyMarkdown children={dsa_readme}/>}/>
+                        {
+                            dsa_data.map(item => {
+                                return <Route path={"/data-structure&algorithm/" + item[0]} element={<MyMarkdown children={item[1]}/>}/>
                             })
                         }
                     </Route>

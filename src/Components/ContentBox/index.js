@@ -7,11 +7,11 @@ import './index.css'
 export default class ContentBox extends Component {
     render() {
         return (
-            <div>
+            <>
                 <ContentLeftBar/>
                 <ContentBody/>
                 <ContentRightBar/>
-            </div>
+            </>
         )
     }
 }

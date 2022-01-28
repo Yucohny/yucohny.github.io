@@ -7,16 +7,16 @@ export default class ContentRightBar extends Component {
     render() {
         return (
             <div className="ContentRightBar">
-                <ReactMarkdownHeading
-                    markdown={markdown}
-                    hyperlink={true}
-                    onChangeHeading={(headingList) => {
-                        console.log(headingList)
-                    }}
-                    liClassName="li"
-                    activeAnchorClassName="activeAnchor"
-                />
-                {/*目录<br/>等待更新*/}
+                {/*<ReactMarkdownHeading*/}
+                {/*    markdown={markdown}*/}
+                {/*    hyperlink={true}*/}
+                {/*    onChangeHeading={(headingList) => {*/}
+                {/*        console.log(headingList)*/}
+                {/*    }}*/}
+                {/*    liClassName="li"*/}
+                {/*    activeAnchorClassName="activeAnchor"*/}
+                {/*/>*/}
+                目录<br/>等待更新
             </div>
         )
     }

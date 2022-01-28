@@ -1,0 +1,14 @@
+.footer {
+    float: left;
+    margin-top: 100px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

@@ -6,7 +6,7 @@ export default class MyNavLink extends Component {
     render() {
         const {to, name} = this.props
         return (
-            <NavLink activeclassname="active" className="Header-Item-NavLink" to={to}>{name}</NavLink>
+            <NavLink activeClassName="active" className="Header-Item-NavLink" to={to}>{name}</NavLink>
         )
     }
 }

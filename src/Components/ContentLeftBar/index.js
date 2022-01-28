@@ -9,8 +9,8 @@ export default class ContentLeftBar extends Component {
         return (
             <div className="ContentLeftBar">
                 <Routes>
-                    <Route path="/introduction" element={<IntroductionLeftBar/>}/>
-                    <Route path="/javascript" element={<JSLeftBar/>}/>
+                    <Route path="/introduction/*" element={<IntroductionLeftBar/>}/>
+                    <Route path="/javascript/*" element={<JSLeftBar/>}/>
                 </Routes>
             </div>
         )

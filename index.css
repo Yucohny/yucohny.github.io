@@ -1,3 +1,7 @@
+html, body {
+    height: 95%;
+}
 #root {
-    height: 98vh;
+    height: 100%;
+    position: relative;
 }

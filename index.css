@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
+    font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
 #root {
     height: 100%;
     position: relative;

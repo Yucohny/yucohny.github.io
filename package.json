@@ -67,11 +67,8 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "node scripts/start.js",
-    "build": "react-scripts build",
-    "test": "node scripts/test.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [

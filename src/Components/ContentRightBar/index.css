@@ -1,0 +1,8 @@
+.ContentRightBar {
+    position: sticky;
+    top: 100px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 3%;
+    width: 15%;
+}

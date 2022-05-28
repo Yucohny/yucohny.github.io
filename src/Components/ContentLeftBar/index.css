@@ -1,0 +1,8 @@
+.ContentLeftBar {
+    position: sticky;
+    top: 100px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 15%;
+}

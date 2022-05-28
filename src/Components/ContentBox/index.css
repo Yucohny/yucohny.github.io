@@ -1,0 +1,8 @@
+.content-box {
+    width: 100%;
+    height: auto;
+    position: relative;
+    min-height: 100%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
